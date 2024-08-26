@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LM-SKIP-{YYYY}-{#####}",
+ "creation": "2023-05-15 07:16:46.125019",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "loan",
+  "repayment_method",
+  "repayment_periods",
+  "column_break_2",
+  "applicant_name",
+  "loan_amount",
+  "section_break_8",
+  "no_of_months_to_skip",
+  "section_break_9",
+  "repayment_dates",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "loan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Loan",
+   "options": "Loan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Loan Skip Instalment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "repayment_method",
+   "fieldtype": "Data",
+   "label": "Repayment Method",
+   "read_only": 1
+  },
+  {
+   "fieldname": "loan_amount",
+   "fieldtype": "Data",
+   "label": "Loan Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "repayment_dates",
+   "fieldtype": "Table",
+   "label": "Repayment Dates",
+   "options": "New Repayment Dates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "repayment_periods",
+   "fieldtype": "Data",
+   "label": "Repayment Period in Months",
+   "read_only": 1
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "no_of_months_to_skip",
+   "fieldtype": "Int",
+   "label": "No of Months to skip"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-15 13:28:42.460807",
+ "modified_by": "Administrator",
+ "module": "Sowaan Hr",
+ "name": "Loan Skip Instalment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

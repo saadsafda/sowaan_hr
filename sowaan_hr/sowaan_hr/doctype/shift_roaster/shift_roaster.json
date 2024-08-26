@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Shift-Roaster-{#####}",
+ "creation": "2024-07-09 19:34:46.430506",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "frequency",
+  "column_break_vjnu",
+  "from_date",
+  "column_break_jwln",
+  "is_replicated",
+  "column_break_odwu",
+  "to_date",
+  "section_break_gf4u",
+  "employee",
+  "amended_from",
+  "column_break_agjq",
+  "branch",
+  "column_break_yuhn",
+  "department",
+  "section_break_cmpt",
+  "get_employees",
+  "employees",
+  "define_shifts_section",
+  "shifts",
+  "shift_assignment_section",
+  "shift_assignment"
+ ],
+ "fields": [
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "\nWeekly\nBi Weekly\nMonthly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vjnu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jwln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_replicated",
+   "fieldtype": "Check",
+   "label": "Is Replicated"
+  },
+  {
+   "fieldname": "column_break_odwu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_replicated == 1 ;",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory_depends_on": "eval:doc.is_replicated == 1 ;"
+  },
+  {
+   "fieldname": "section_break_gf4u",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shift Roaster",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_agjq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_yuhn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "section_break_cmpt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "get_employees",
+   "fieldtype": "Button",
+   "label": "Get Employees"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Table",
+   "label": "Employees",
+   "options": "Employees Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "define_shifts_section",
+   "fieldtype": "Section Break",
+   "label": "Define Shifts"
+  },
+  {
+   "fieldname": "shifts",
+   "fieldtype": "Table",
+   "label": "Shifts",
+   "options": "Shift Pattern",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shift_assignment_section",
+   "fieldtype": "Section Break",
+   "label": "Shift Assignment"
+  },
+  {
+   "fieldname": "shift_assignment",
+   "fieldtype": "Table",
+   "label": "Shift Assignment",
+   "options": "Shift Assignment Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-15 12:01:52.123684",
+ "modified_by": "Administrator",
+ "module": "Sowaan Hr",
+ "name": "Shift Roaster",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
